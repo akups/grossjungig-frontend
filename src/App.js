@@ -87,7 +87,7 @@ class App extends React.Component {
           />
           <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
           <Route exact path="/maps" component={MapView} />
-          <Route exact path="/forgotpassword" component={ForgotPassword} />
+          <Route exact path="/forgotPassword" component={ForgotPassword} />
         </ThemeProvider>
         <Footer />
       </div>

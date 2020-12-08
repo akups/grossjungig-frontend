@@ -3,7 +3,7 @@ import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 import loginLocales from "../../locales/locales.login.json";
 import "./forgotpassword.css";
-import forgotLocales from "../../locales/locales.forgotpasswrod.json";
+import forgotLocales from "../../locales/locales.forgotpassword.json";
 
 const title = {
   pageTitle: "Forgot Password Screen",
@@ -34,6 +34,7 @@ class ForgotPassword extends Component {
         messageFromServer: "",
       });
     } else {
+      console.log(this.state.email);
       axios
         .post(`${process.env.REACT_APP_BACKENDURL}api/auth/forgotPassword`, {
           email: this.state.email,
@@ -56,7 +57,7 @@ class ForgotPassword extends Component {
           }
         })
         .catch((error) => {
-          console.log(error.data);
+          console.log(error);
         });
     }
   };
@@ -80,7 +81,7 @@ class ForgotPassword extends Component {
                 type="text"
                 id="email"
                 name="email"
-                value={this.state.email}
+                value={email}
                 onChange={this.handleChange("email")}
               />
               <button type="submit">{forgotLocales.submit[lang]}</button>

@@ -70,7 +70,7 @@ class Login extends Component {
               />
               <h5>
                 Don’t remember your password?{" "}
-                <Link to="/forgotpassword" style={{ textDecoration: "none" }}>
+                <Link to="/forgotPassword" style={{ textDecoration: "none" }}>
                   Click here
                 </Link>
               </h5>
